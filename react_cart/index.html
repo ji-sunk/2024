@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹퍼블리싱</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <div class="topbar">
+            <h2>Shop It</h2>
+            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+        </div>
+        <section class="product-container">
+            <div class="products"></div>
+        </section>
+    </div>
+    <div class="myCart">
+        <h3>My Cart</h3>
+        <div class="cart">
+            <div class="item">
+                <div class="image">
+                    <img src="https://images.pexels.com/photos/701877/pexels-photo-701877.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                </div>
+                <div class="item-name">Sunglasses 1</div>
+                <div class="quantity">
+                    <i class="fa-solid fa-plus fa-2xs"></i>
+                    <h5>1</h5>
+                    <i class="fa-solid fa-minus fa-2xs"></i>
+                </div>
+                <h4 class="price">$ 100</h4>
+                <a class="delete"><i class="fa-solid fa-trash-can"></i></a>
+            </div>
+        </div>
+        <div class="buttons">
+            <button class="clear-cart" onclick="clearCart()">Clear Cart</button>
+            <button class="buy">Buy Now <span>(작동안됨)</span></button>
+        </div>
+    </div>
+</body>
+</html>
