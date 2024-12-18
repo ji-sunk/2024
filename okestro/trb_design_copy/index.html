@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/okestro_logo.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--      <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">-->
+    <title>Trombone Enterprise</title>
+    <script>
+      const disableDevTools = JSON.parse('%VITE_DISABLE_REACT_DEVTOOLS%');
+      if (disableDevTools) {
+        window.__REACT_DEVTOOLS_GLOBAL_HOOK__.inject = function () {};
+
+        // local이 아닌 환경에서만 적용
+        if (window.location.hostname !== 'localhost') {
+          // 마우스 우클릭 막기
+          if (window.addEventListener) {
+            window.addEventListener(
+              'contextmenu',
+              function (e) {
+                e.preventDefault();
+                return false;
+              },
+              false,
+            );
+          } else {
+            window.attachEvent('oncontextmenu', function (e) {
+              e.preventDefault();
+              return false;
+            });
+          }
+
+          const handleMouseEvent = function (e) {
+            try {
+              if (typeof e === 'undefined') {
+                if (window.event.button && window.event.button === 2) {
+                  return false;
+                }
+              } else if (
+                (e.which && e.which === 3) ||
+                (e.button && e.button === 2)
+              ) {
+                e.preventDefault();
+                return false;
+              }
+            } catch (err) {}
+          };
+
+          window.onmousedown = handleMouseEvent;
+          window.onmouseup = handleMouseEvent;
+
+          // 개발자 도구 막는 스크립트
+          window.addEventListener('keydown', function (e) {
+            if (
+              // CMD + Alt + I (Chrome, Firefox, Safari)
+              (e.metaKey && e.altKey && e.keyCode === 73) ||
+              // CMD + Alt + J (Chrome)
+              (e.metaKey && e.altKey && e.keyCode === 74) ||
+              // CMD + Alt + C (Chrome)
+              (e.metaKey && e.altKey && e.keyCode === 67) ||
+              // CMD + Shift + C (Chrome)
+              (e.metaKey && e.shiftKey && e.keyCode === 67) ||
+              // Ctrl + Shift + I (Chrome, Firefox, Safari, Edge)
+              (e.ctrlKey && e.shiftKey && e.keyCode === 73) ||
+              // Ctrl + Shift + J (Chrome, Edge)
+              (e.ctrlKey && e.shiftKey && e.keyCode === 74) ||
+              // Ctrl + Shift + C (Chrome, Edge)
+              (e.ctrlKey && e.shiftKey && e.keyCode === 67) ||
+              // F12 (Chrome, Firefox, Edge)
+              e.keyCode === 123 ||
+              // CMD + Alt + U, Ctrl + U (View source: Chrome, Firefox, Safari, Edge)
+              (e.metaKey && e.altKey && e.keyCode === 85) ||
+              (e.ctrlKey && e.keyCode === 85)
+            ) {
+              e.preventDefault();
+              return false;
+            }
+          });
+        }
+      }
+
+      // auto complete 끄기
+      document.addEventListener('DOMContentLoaded', function () {
+        document.querySelectorAll('input, textarea').forEach(function (input) {
+          input.setAttribute('autocomplete', 'off');
+        });
+
+        document.body.addEventListener(
+          'focus',
+          function (event) {
+            if (
+              event.target.tagName === 'INPUT' ||
+              event.target.tagName === 'TEXTAREA'
+            ) {
+              event.target.setAttribute('autocomplete', 'one-time-code');
+            }
+          },
+          true,
+        );
+      });
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

@@ -1,0 +1,65 @@
+#guide {
+  font-family: "Pretendard";
+}
+#guide section {
+  padding-bottom: 20px;
+}
+#guide section + section {
+  margin-top: 20px;
+}
+#guide p.title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #5c5c5c;
+}
+#guide p.title + .sub-title {
+  margin-top: 20px;
+}
+#guide p.sub-title {
+  font-size: 18px;
+  font-weight: 500;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #d4d4d4;
+  color: #666;
+}
+#guide p.sub-title span {
+  margin-right: 5px;
+}
+#guide div.comp {
+  display: block;
+  margin: 10px 0 30px;
+}
+#guide div.comp .color-wrap {
+  display: flex;
+  flex-wrap: nowrap;
+  font-weight: 400;
+}
+#guide div.comp .square {
+  flex: none;
+  width: 100px;
+  height: 100px;
+  margin: 0 20px;
+  display: block;
+  border: 1px solid #d4d4d4;
+  border-radius: 10px;
+}
+#guide div.comp .square:first-child {
+  margin-left: 0;
+}
+#guide div.font-wrap {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  margin-top: 10px;
+}
+#guide div.font-wrap .font-box {
+  font-family: "Pretendard";
+  display: flex;
+  flex: none;
+  justify-content: space-between;
+  padding: 12px 0;
+  font-size: 1.5rem;
+}
+#guide div.font-wrap .font-box:not(:first-child) {
+  border-top: 1px solid #d4d4d4;
+}

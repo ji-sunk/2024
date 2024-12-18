@@ -1,0 +1,348 @@
+@charset "UTF-8";
+// @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+/* reset */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* reset E */
+
+/* color */
+:root {
+  --color-transparent: transparent;
+  --color-current: currentColor;
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --color-okeMain-100: #474766;
+  --color-okeMain-200: #5bca78;
+  --color-okePurple-main: #7b64de;
+  --color-okePurple-50: #221d3e;
+  --color-okePurple-100: #6854b8;
+  --color-okePurple-200: #7662c6;
+  --color-okePurple-300: #836fd1;
+  --color-okePurple-400: #9280dc;
+  --color-okePurple-500: #a190e8;
+  --color-okePurple-600: #afa1ec;
+  --color-okePurple-700: #beb1f4;
+  --color-okePurple-800: #c9bef6;
+  --color-okePurple-900: #efebff;
+  --color-okePurple-1000: #f9f6ff;
+  /* okeUi */
+  --color-okeUi-100: #000000;
+  --color-okeUi-200: #202123;
+  --color-okeUi-300: #333333;
+  --color-okeUi-350: #454545;
+  --color-okeUi-400: #65676e;
+  --color-okeUi-450: #9796a7;
+  --color-okeUi-500: #c1c3c9;
+  --color-okeUi-600: #cbced6;
+  --color-okeUi-700: #dde1e4;
+  --color-okeUi-730: #e0e0e6;
+  --color-okeUi-750: #ececf1;
+  --color-okeUi-800: #ecedf1;
+  --color-okeUi-890: #f2f2f7;
+  --color-okeUi-900: #fafafd;
+  --color-okeUi-950: #f8f8fa;
+  --color-okeUi-980: #f0f0f4;
+  --color-okeUi-1000: #fafafa;
+  --color-okeUi-1100: #fbfbfc;
+  --color-okeUi-1200: #ffffff;
+
+  /* okeBoxShadow */
+  --box-shadow-oke-100: 0px 0px 3px 1px rgba(0, 0, 0, 0.1);
+
+  /* okeDim */
+  --color-okeDim-50: rgba(51, 51, 51, 0.5);
+
+  /* okeStatus */
+  --color-okeStatus-100: #63a1ff;
+  --color-okeStatus-200: #b490e8;
+  --color-okeStatus-400: #ef5350;
+  --color-okeStatus-500: #66bb6a;
+  --color-okeStatus-600: #ffa726;
+  --color-okeStatus-700: #4a90e2;
+  --color-okeStatus-dark-100: #2f4d7a;
+  --color-okeStatus-dark-200: #52416c;
+  --color-okeStatus-dark-300: #714a1a;
+  --color-okeStatus-dark-400: #833334;
+
+  /* okeBlue */
+  --color-okeBlue-50: #edf7ff;
+  --color-okeBlue-100: #d4ebff;
+  --color-okeBlue-200: #bfe1ff;
+  --color-okeBlue-300: #7aa6e3;
+  --color-okeBlue-400: #4784d9;
+  --color-okeBlue-500: #4a8ded;
+  --color-okeBlue-600: #2b63b0;
+  --color-okeBlue-700: #3373cc;
+  --color-okeBlue-800: #003785;
+  --color-okeBlue-900: #0d3670;
+
+  /* okeGray */
+  --color-okeGray-50: #f7fafc;
+  --color-okeGray-100: #edf2f7;
+  --color-okeGray-200: #e2e8f0;
+  --color-okeGray-300: #cbd5e0;
+  --color-okeGray-400: #888888;
+  --color-okeGray-500: #808080;
+  --color-okeGray-600: #666666;
+  --color-okeGray-700: #595959;
+  --color-okeGray-800: #333333;
+  --color-okeGray-900: #111111;
+
+  /* okeDark */
+  --color-okeDark-50: #f9fafb;
+  --color-okeDark-100: #f2f4f7;
+  --color-okeDark-200: #e4e7ec;
+  --color-okeDark-300: #d0d5dd;
+  --color-okeDark-400: #98a2b3;
+  --color-okeDark-500: #667085;
+  --color-okeDark-600: #475467;
+  --color-okeDark-700: #344054;
+  --color-okeDark-800: #1d2939;
+  --color-okeDark-900: #101828;
+
+  /* okeGreen */
+  --color-okeGreen-50: #f0fff4;
+  --color-okeGreen-100: #00e541;
+  --color-okeGreen-200: #00d93d;
+  --color-okeGreen-300: #00bc35;
+  --color-okeGreen-400: #009e2d;
+  --color-okeGreen-500: #008726;
+  --color-okeGreen-600: #006b1e;
+  --color-okeGreen-700: #004d16;
+  --color-okeGreen-800: #00330e;
+  --color-okeGreen-900: #001a07;
+}
+
+/* variables.css */
+:root {
+  --radius-none: 0px;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-full: 9999px;
+
+  --shadow-none: none;
+  --shadow-sm: 0px 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0px 10px 15px rgba(0, 0, 0, 0.15);
+  --shadow-xl: 0px 20px 25px rgba(0, 0, 0, 0.2);
+}
+
+.button {
+  background-color: var(--color-okeMain-100);
+  color: var(--color-white);
+}
+
+.card {
+  border: 2px solid var(--color-okePurple-main);
+}
+
+#header {
+  position: relative;
+  z-index: 11;
+  background: var(--chakra-colors-okePurple-main);
+  width: var(--chakra-sizes-full);
+  color: var(--color-current);
+  background-color: #7b64de;
+}
+
+header .header-wrap {
+  display: flex;
+  width: 100%;
+  height: 50px;
+  padding-left: 21px;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  overflow-x: clip;
+  border-bottom: 1px solid rgb(229, 231, 235);
+  padding-right: 29px;
+}
+
+header .header-wrap .left-area {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+}
+
+header .header-wrap .right-area {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+}
+
+.lnb {
+  // display: flex;
+  // flex-direction: column;
+  // -webkit-box-align: center;
+  // align-items: center;
+  height: calc(-60px + 100vh);
+  position: relative;
+  width: 340px;
+  // -webkit-box-flex: 1;
+  // flex-grow: 1;
+  // overflow-y: scroll;
+  // scrollbar-width: none;
+  // padding-inline: 20px;
+  // z-index: 45;
+  // border-right: 1px solid rgb(229, 232, 240);
+  // background-color: rgb(248, 248, 250);
+  // transition: 0.2s;
+}
+
+:root {
+  --primary-color: #185ee0;
+  --secondary-color: #e6eef9;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+.lnb-menu {
+  width: 340px;
+  white-space: nowrap;
+  background-color: var(--color-okeUi-500);
+}
+
+.depth-0,
+.depth-1,
+.depth-2,
+.depth-3,
+.depth-4 {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+.depth-0 > li > div svg {
+  display: none;
+}

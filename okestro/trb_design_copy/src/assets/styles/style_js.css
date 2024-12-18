@@ -1,0 +1,350 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+:root {
+  --color-transparent: transparent;
+  --color-current: currentColor;
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --color-okeMain-100: #474766;
+  --color-okeMain-200: #5bca78;
+  --color-okePurple-main: #7b64de;
+  --color-okePurple-50: #221d3e;
+  --color-okePurple-100: #6854b8;
+  --color-okePurple-200: #7662c6;
+  --color-okePurple-300: #836fd1;
+  --color-okePurple-400: #9280dc;
+  --color-okePurple-500: #a190e8;
+  --color-okePurple-600: #afa1ec;
+  --color-okePurple-700: #beb1f4;
+  --color-okePurple-800: #c9bef6;
+  --color-okePurple-900: #efebff;
+  --color-okePurple-1000: #f9f6ff;
+  --color-okeUi-100: #000000;
+  --color-okeUi-200: #202123;
+  --color-okeUi-300: #333333;
+  --color-okeUi-350: #454545;
+  --color-okeUi-400: #65676e;
+  --color-okeUi-450: #9796a7;
+  --color-okeUi-500: #c1c3c9;
+  --color-okeUi-600: #cbced6;
+  --color-okeUi-700: #dde1e4;
+  --color-okeUi-730: #e0e0e6;
+  --color-okeUi-750: #ececf1;
+  --color-okeUi-800: #ecedf1;
+  --color-okeUi-890: #f2f2f7;
+  --color-okeUi-900: #fafafd;
+  --color-okeUi-950: #f8f8fa;
+  --color-okeUi-980: #f0f0f4;
+  --color-okeUi-1000: #fafafa;
+  --color-okeUi-1100: #fbfbfc;
+  --color-okeUi-1200: #ffffff;
+  --box-shadow-oke-100: 0px 0px 3px 1px rgba(0, 0, 0, 0.1);
+  --color-okeDim-50: rgba(51, 51, 51, 0.5);
+  --color-okeStatus-100: #63a1ff;
+  --color-okeStatus-200: #b490e8;
+  --color-okeStatus-400: #ef5350;
+  --color-okeStatus-500: #66bb6a;
+  --color-okeStatus-600: #ffa726;
+  --color-okeStatus-700: #4a90e2;
+  --color-okeStatus-dark-100: #2f4d7a;
+  --color-okeStatus-dark-200: #52416c;
+  --color-okeStatus-dark-300: #714a1a;
+  --color-okeStatus-dark-400: #833334;
+  --color-okeBlue-50: #edf7ff;
+  --color-okeBlue-100: #d4ebff;
+  --color-okeBlue-200: #bfe1ff;
+  --color-okeBlue-300: #7aa6e3;
+  --color-okeBlue-400: #4784d9;
+  --color-okeBlue-500: #4a8ded;
+  --color-okeBlue-600: #2b63b0;
+  --color-okeBlue-700: #3373cc;
+  --color-okeBlue-800: #003785;
+  --color-okeBlue-900: #0d3670;
+  --color-okeGray-50: #f7fafc;
+  --color-okeGray-100: #edf2f7;
+  --color-okeGray-200: #e2e8f0;
+  --color-okeGray-300: #cbd5e0;
+  --color-okeGray-400: #888888;
+  --color-okeGray-500: #808080;
+  --color-okeGray-600: #666666;
+  --color-okeGray-700: #595959;
+  --color-okeGray-800: #333333;
+  --color-okeGray-900: #111111;
+  --color-okeDark-50: #f9fafb;
+  --color-okeDark-100: #f2f4f7;
+  --color-okeDark-200: #e4e7ec;
+  --color-okeDark-300: #d0d5dd;
+  --color-okeDark-400: #98a2b3;
+  --color-okeDark-500: #667085;
+  --color-okeDark-600: #475467;
+  --color-okeDark-700: #344054;
+  --color-okeDark-800: #1d2939;
+  --color-okeDark-900: #101828;
+  --color-okeGreen-50: #f0fff4;
+  --color-okeGreen-100: #00e541;
+  --color-okeGreen-200: #00d93d;
+  --color-okeGreen-300: #00bc35;
+  --color-okeGreen-400: #009e2d;
+  --color-okeGreen-500: #008726;
+  --color-okeGreen-600: #006b1e;
+  --color-okeGreen-700: #004d16;
+  --color-okeGreen-800: #00330e;
+  --color-okeGreen-900: #001a07;
+}
+:root {
+  --radius-none: 0px;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-full: 9999px;
+  --shadow-none: none;
+  --shadow-sm: 0px 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0px 10px 15px rgba(0, 0, 0, 0.15);
+  --shadow-xl: 0px 20px 25px rgba(0, 0, 0, 0.2);
+}
+.button {
+  background-color: var(--color-okeMain-100);
+  color: var(--color-white);
+}
+
+.header {
+  /* position: fixed; */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background-color: #7b64de;
+  z-index: 10;
+}
+.header-wrap {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  padding: 0 25px;
+}
+
+.header-wrap * {
+  color: #fff;
+}
+
+.header-wrap h1.title {
+  position: relative;
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: 1px;
+  padding-left: 35px;
+}
+
+/* .lnb {
+  position: relative;
+  min-width: 32px;
+  max-width: 320px;
+  width: 320px;
+  height: auto;
+  border-right: 1px solid #e2e2f0;
+  background-color: var(--color-white);
+} */
+
+.lnb,
+.lnb-container {
+  width: 32px;
+  overflow: hidden;
+  height: 100vh;
+  border-right: 1px solid #e2e2f0;
+  background-color: var(--color-white);
+  transition: width 0.3s ease;
+}
+
+/* 
+.lnb.closed {
+  width: 32px !important;
+}
+.lnb.open {
+  width: 320px !important;
+}
+
+.lnb {
+  width: 32px;
+  height: 100vh;
+  top: 0;
+  left: 0;
+} */
+
+.lnb.open {
+  width: 320px;
+  transition: width 0.3s ease;
+}
+
+.lnb.closed {
+  width: 32px;
+  transition: width 0.3s ease;
+}
+.lnb-toggle-btn {
+  background: transparent;
+  border: none;
+  color: white;
+  padding: 10px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.layout-main {
+  transition: margin-left 0.3s ease;
+}
+
+/* 기본 LNB 스타일 */
+.lnb {
+  width: 32px;
+  transition: width 0.3s ease;
+  overflow: hidden;
+}
+
+/* 열린 상태 */
+.lnb.open {
+  width: 320px;
+}
+
+/* 마우스 호버 시 */
+.lnb.hovered {
+  width: 320px;
+  background-color: #f5f5f5; /* 예시 */
+}
+
+/* 마우스 벗어남 상태 */
+.lnb.hoveredOut {
+  width: 32px;
+  background-color: #ddd; /* 예시 */
+  transition: background-color 0.3s ease;
+}
+
+/* hoveredOut 상태에서 버튼을 제외하고 메뉴 숨김 */
+.lnb.hoveredOut > *:not(button) {
+  display: none;
+}

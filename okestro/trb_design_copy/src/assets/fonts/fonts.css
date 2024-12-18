@@ -1,0 +1,156 @@
+@charset "utf-8";
+
+/*  Pretendard */
+@font-face {
+  font-family: 'Pretendard';
+  font-weight: 900;
+  font-display: swap;
+  src:
+    local('Pretendard Black'),
+    url('webfonts/woff2/Pretendard/Pretendard-Black.woff2') format('woff2'),
+    url('webfonts/woff/Pretendard/Pretendard-Black.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  font-weight: 800;
+  font-display: swap;
+  src:
+    local('Pretendard ExtraBold'),
+    url('webfonts/woff2/Pretendard/Pretendard-ExtraBold.woff2') format('woff2'),
+    url('webfonts/woff/Pretendard/Pretendard-ExtraBold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  font-weight: 700;
+  font-display: swap;
+  src:
+    local('Pretendard Bold'),
+    url('webfonts/woff2/Pretendard/Pretendard-Bold.woff2') format('woff2'),
+    url('webfonts/woff/Pretendard/Pretendard-Bold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  font-weight: 600;
+  font-display: swap;
+  src:
+    local('Pretendard SemiBold'),
+    url('webfonts/woff2/Pretendard/Pretendard-SemiBold.woff2') format('woff2'),
+    url('webfonts/woff/Pretendard/Pretendard-SemiBold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  font-weight: 500;
+  font-display: swap;
+  src:
+    local('Pretendard Medium'),
+    url('webfonts/woff2/Pretendard/Pretendard-Medium.woff2') format('woff2'),
+    url('webfonts/woff/Pretendard/Pretendard-Medium.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  font-weight: 400;
+  font-display: swap;
+  src:
+    local('Pretendard Regular'),
+    url('webfonts/woff2/Pretendard/Pretendard-Regular.woff2') format('woff2'),
+    url('webfonts/woff/Pretendard/Pretendard-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  font-weight: 300;
+  font-display: swap;
+  src:
+    local('Pretendard Light'),
+    url('webfonts/woff2/Pretendard/Pretendard-Light.woff2') format('woff2'),
+    url('webfonts/woff/Pretendard/Pretendard-Light.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  font-weight: 200;
+  font-display: swap;
+  src:
+    local('Pretendard ExtraLight'),
+    url('webfonts/woff2/Pretendard/Pretendard-ExtraLight.woff2') format('woff2'),
+    url('webfonts/woff/Pretendard/Pretendard-ExtraLight.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  font-weight: 100;
+  font-display: swap;
+  src:
+    local('Pretendard Thin'),
+    url('webfonts/woff2/Pretendard/Pretendard-Thin.woff2') format('woff2'),
+    url('webfonts/woff/Pretendard/Pretendard-Thin.woff') format('woff');
+}
+
+/* Roboto */
+@font-face {
+  font-family: 'Roboto';
+  font-weight: 900;
+  font-display: swap;
+  src:
+    local('Roboto Black'),
+    url('webfonts/woff2/Roboto/Roboto-Black.woff2') format('woff2'),
+    url('webfonts/woff/Roboto/Roboto-Black.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-weight: 700;
+  font-display: swap;
+  src:
+    local('Roboto Bold'),
+    url('webfonts/woff2/Roboto/Roboto-Bold.woff2') format('woff2'),
+    url('webfonts/woff/Roboto/Roboto-Bold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-display: swap;
+  src:
+    local('Roboto Medium'),
+    url('webfonts/woff2/Roboto/Roboto-Medium.woff2') format('woff2'),
+    url('webfonts/woff/Roboto/Roboto-Medium.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-display: swap;
+  src:
+    local('Roboto Regular'),
+    url('webfonts/woff2/Roboto/Roboto-Regular.woff2') format('woff2'),
+    url('webfonts/woff/Roboto/Roboto-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-weight: 300;
+  font-display: swap;
+  src:
+    local('Roboto Light'),
+    url('webfonts/woff2/Roboto/Roboto-Light.woff2') format('woff2'),
+    url('webfonts/woff/Roboto/Roboto-Light.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-weight: 100;
+  font-display: swap;
+  src:
+    local('Roboto Thin'),
+    url('webfonts/woff2/Roboto/Roboto-Thin.woff2') format('woff2'),
+    url('webfonts/woff/Roboto/Roboto-Thin.woff') format('woff');
+}
+
+/* unicode-range: U+0030-0039; 숫자 범위 */
+/* font-display: swap; Gives the font face a very small block period and an infinite swap period. */

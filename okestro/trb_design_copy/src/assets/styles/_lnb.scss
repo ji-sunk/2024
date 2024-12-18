@@ -1,0 +1,212 @@
+/* menu */
+i.ico-mark{
+    flex:none;
+    flex-shrink: 0;
+    @include size(24px,24px);            
+    background: url(../img/ic_mark_off.svg) no-repeat center/ 24px;            
+    cursor: pointer;
+    &.active{
+        background-image: url(../img/ic_mark_on.svg);
+    }
+}
+.menu {    
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    font-size:16px;
+    line-height: 24px;
+    color:$gray-03;    
+    li {
+        position: relative;          
+        ul {       // 모든 하위 메뉴 공통 스타일            
+            margin: 0;
+            display: none;
+            li a { 
+                padding: 6px 8px 6px 0;
+                &:hover{
+                    background-color:#ebedf4;
+                }    
+            }
+        }
+        &.active > ul { display: block;}
+        // 메뉴 링크 스타일
+        a {
+            display: flex;
+            align-items: center;
+            color: #333;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+        &.has-mark{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-right: 16px;
+        }
+        
+    }
+    > li{
+        position: relative;
+        @include border(x,$nav-line);
+        background-color: $white;
+        &:first-child{
+            @include border(top,$nav-line);
+            border-top-left-radius: 8px; border-top-right-radius: 8px;
+        }  
+        &:last-child{ 
+            @include border(bottom,$nav-line); 
+            border-bottom-left-radius: 8px; border-bottom-right-radius: 8px;
+        }
+        &.has-mark{
+            a:hover{
+                background-color:transparent;
+            } 
+        }
+        &.has-submenu {
+            > a::after {
+                content: '';
+                margin-left: auto;
+                @include size(24px, 24px);
+                background:url(../img/ic_arr_down.svg) no-repeat 0 0/ 24px;
+                transition: transform 0.2s ease;
+            }
+            &.active {
+                > ul{
+                    padding-top:16px; padding-bottom:16px;padding-right:8px;
+                    background-color: #fafafc;
+                }
+                > a:after{background-image:url(../img/ic_arr_up.svg);}
+            }            
+            > ul{
+                padding-left:8px;
+                > li + li {margin-top:4px;}
+            }
+        }
+        & + li{border-top:1px solid $nav-line;}
+        > a { // 1depth
+            padding: 16px;
+            font-size:16px;
+            line-height: 24px;            
+            font-weight: 600;
+        }
+        > ul{                  
+            border-top:1px solid $nav-line;
+            li.has-mark{
+                &:hover{
+                background-color:#ebedf4;
+                @include border-radius(4px);              
+                a:hover{background-color: transparent;}
+                } 
+            }
+        }
+        > ul > li {
+            a{
+                font-size: 14px;                
+            }
+            > a {// 2depth
+                padding-left:32px;              
+            }
+            
+            &.has-submenu {
+                &.active a:before{rotate: 90deg;}
+                &.active > a{
+                    font-weight: 600;
+                }
+                > a{
+                    padding-left: 8px;
+                    &::before{
+                        content: '';
+                        @include size(24px, 24px);
+                        background:  url(../img/ic_arr_lnb_close.svg) no-repeat 0 0 / 24px;
+                    }
+                }
+                > ul > li{
+                    > a {// 3depth
+                        padding-left:48px;                                      
+                    }
+                    &.has-submenu {
+                        > a{
+                            padding-left:24px;                            
+                            font-weight: 600; 
+                            &::before{
+                                content: '';
+                                @include size(24px, 24px);
+                                background:  url(../img/ic_arr_lnb_close.svg) no-repeat 0 0 / 24px;
+                            }
+                        }
+                        > ul > li > a {// 4depth
+                            padding-left:32px;                            
+                            &::before{
+                                content: '';                                
+                                @include size(24px, 24px);
+                                background:  url(../img/ic_dot_3.svg) no-repeat 50% 50% / 4px;
+                            }                        
+                        } 
+                    }
+                }
+            }
+        }
+    }   
+}
+
+/* 즐겨찾기 */
+.accordion {
+    border: 1px solid #E2E2F0;
+    border-radius: 8px;
+    overflow: hidden;
+    .accordion-item {        
+        .accordion-header {
+            display: flex;
+            font-size:16px;
+            font-weight: 600;
+            background-color:$white;
+            border: none;
+            padding: 15px;
+            width: 100%;
+            text-align: left;
+            cursor: pointer;
+            outline: none;
+            transition: background-color 0.2s ease;
+            &:after{
+                content: '';
+                margin-left: auto;
+                @include size(24px, 24px);
+                background:url(../img/ic_arr_down.svg) no-repeat 0 0/ 24px;   
+            }
+            &.active{
+                 & + .accordion-content{
+                    border-top:1px solid #E2E2F0;
+                    display: block;
+                 }
+                 &:after{
+                    background-image: url(../img/ic_arr_up.svg);
+                }
+            }
+        }
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+            background-color: #fafafc;
+            .list-favorite{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin: 0 8px;
+                padding:6px 8px;
+                @include font-size(sm,400, 20px);
+                &:first-child{margin-top:16px;}
+                &:last-child{margin-bottom:16px;}
+                &:only-child{margin:16px 8px;}
+                &:hover{
+                    background-color:#ebedf4;
+                    @include border-radius(4px);              
+                    a:hover{background-color: transparent;}
+                    } 
+            }
+            // p {
+            //     margin: 8px 0;
+            // }
+        }
+    }
+}

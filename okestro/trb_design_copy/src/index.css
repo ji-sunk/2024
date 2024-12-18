@@ -1,0 +1,237 @@
+@charset "UTF-8";
+
+/* reset */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* reset E */
+
+:root {
+  --color-transparent: transparent;
+  --color-current: currentColor;
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --primary-color: #3498db;
+  --secondary-color: #2ecc71;
+  --color-okeMain-100: #474766;
+  --color-okeMain-200: #5bca78;
+  --color-okePurple-main: #7b64de;
+  --color-okePurple-50: #221d3e;
+  --color-okePurple-100: #6854b8;
+  --color-okePurple-200: #7662c6;
+  --color-okePurple-300: #836fd1;
+  --color-okePurple-400: #9280dc;
+  --color-okePurple-500: #a190e8;
+  --color-okePurple-600: #afa1ec;
+  --color-okePurple-700: #beb1f4;
+  --color-okePurple-800: #c9bef6;
+  --color-okePurple-900: #efebff;
+  --color-okePurple-1000: #f9f6ff;
+
+  --font-size-base: 16px;
+}
+
+/* variables.css */
+:root {
+  --radius-none: 0px;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-full: 9999px;
+
+  --shadow-none: none;
+  --shadow-sm: 0px 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0px 10px 15px rgba(0, 0, 0, 0.15);
+  --shadow-xl: 0px 20px 25px rgba(0, 0, 0, 0.2);
+}
+
+button {
+  background-color: var(--color-okeMain-100);
+  color: var(--color-white);
+}
+
+.card {
+  border: 2px solid var(--color-okePurple-main);
+}
+
+#header {
+  position: relative;
+  z-index: 11;
+  background: var(--chakra-colors-okePurple-main);
+  width: var(--chakra-sizes-full);
+  color: var(--color-current);
+  background-color: #7b64de;
+}
+
+header .header-wrap {
+  display: flex;
+  width: 100%;
+  height: 50px;
+  padding-left: 21px;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  overflow-x: clip;
+  border-bottom: 1px solid rgb(229, 231, 235);
+  padding-right: 29px;
+}
+
+header .header-wrap .left-area {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+}
+
+header .header-wrap .right-area {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+}
+.noti {
+  width: 20px;
+  height: 20px;
+  background: #000002 url(/src/assets/images/ico-noti.svg) no-repeat;
+}
+
+.lnb {
+  display: flex;
+  flex-direction: column;
+  -webkit-box-align: center;
+  align-items: center;
+  height: calc(-60px + 100vh);
+  position: relative;
+  width: 340px;
+  -webkit-box-flex: 1;
+  flex-grow: 1;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  padding-inline: 20px;
+  z-index: 45;
+  border-right: 1px solid rgb(229, 232, 240);
+  background-color: rgb(248, 248, 250);
+  transition: 0.2s;
+}

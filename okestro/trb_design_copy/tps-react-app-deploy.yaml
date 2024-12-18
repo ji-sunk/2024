@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tps-react-app
+  namespace: tps
+  labels:
+    app: tps-react-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: tps-react-app
+  template:
+    metadata:
+      name: tps-react-app
+      labels:
+        app: tps-react-app
+    spec:
+      containers:
+        - name: tps-react-app
+          image: tps-react-app:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 80
+      restartPolicy: Always
+      serviceAccountName: default

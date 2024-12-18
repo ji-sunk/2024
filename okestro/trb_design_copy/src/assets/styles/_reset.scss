@@ -1,0 +1,108 @@
+@charset "UTF-8";
+
+body,div,h1,h2,h3,h4,h5,h6,form,fieldset,p,button,iframe,tr,tbody,thead,table,th,td,b,span,strong {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+dl,dt,dd,ul,ol,li {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+h1,h2,h3,h4,h5,h6,dt {
+    // font-weight: 400
+}
+img,fieldset,iframe,button {
+    border: 0;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+th,td {
+    border-collapse: collapse;
+}
+legend,caption {
+    position: absolute;
+    height: 1px;
+    overflow: hidden;
+}
+abbr {
+    text-decoration: none;
+}
+hr {
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 40px 0;
+}
+em,u,cite,i {
+    font-style: normal;
+}
+strong,b {
+    font-weight: 500;
+}
+ul,li {
+    list-style: none;
+}
+a {
+    font-size: 15px;
+    color: #444;
+    outline-offset: 1px;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+button {
+    border: 0;
+    font-family: "pretendard";
+    cursor: pointer;
+    background: 0 0;
+    box-sizing: border-box;
+    color: #444;
+}
+
+input,textarea {
+    font-family: "pretendard",sans-serif;
+    color: #444;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-tap-highlight-color: transparent;
+}
+
+article,aside,details,figcaption,figure,footer,header,main,hgroup,nav,section,summary {
+    display: block;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.hide {
+    position: absolute;
+    width: 0;
+    height: 0;
+    z-index: -1;
+    color: transparent;
+    overflow: hidden;
+    font-size: xx-small;
+    line-height: 0;
+}
+
+.hidden {
+    display: none!important
+}
+.clfix {
+    *zoom:1
+}
+.clfix:before,.clfix:after {
+    display: table;
+    line-height: 0;
+    content: "";
+}
+
+.clfix:after {
+    clear: both;
+}
